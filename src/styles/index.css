@@ -1,0 +1,36 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+/* ── Typography System ── */
+
+.font-heading {
+  font-family: 'Newsreader', serif;
+  font-style: italic;
+}
+
+.font-body {
+  font-family: 'Manrope', sans-serif;
+}
+
+.text-primary   { color: #1c1917; }
+.text-secondary { color: #57534e; }
+.text-muted     { color: #78716c; }
+.text-subtle    { color: #a8a29e; }
+.text-inverse   { color: #fbf2c4; }
+.bg-brand       { background-color: #fbf2c4; }
+.bg-dark        { background-color: #1c1c1a; }
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}

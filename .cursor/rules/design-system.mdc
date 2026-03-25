@@ -1,0 +1,58 @@
+---
+description: Design system tokens and typography conventions for The Untied House website
+globs: src/**/*.{tsx,css}
+alwaysApply: false
+---
+
+# The Untied House — Design System
+
+## Typography
+
+All headings MUST use Newsreader italic via the `.font-heading` utility class.
+
+| Element | Class | Notes |
+|---------|-------|-------|
+| Headings (h1–h3, display text) | `font-heading` | Sets `font-family: 'Newsreader', serif; font-style: italic;` |
+| Body / UI text | `font-body` | Sets `font-family: 'Manrope', sans-serif;` |
+| Labels, tags, buttons | `font-body` + `uppercase tracking-[0.2em–0.4em] text-[10px]` | Small caps treatment |
+
+Never use raw `font-['Newsreader:...']` inline classes — always use `.font-heading`.
+
+### Heading sizes (responsive)
+
+- **Hero (h1)**: `text-5xl sm:text-7xl md:text-8xl lg:text-[10rem]`
+- **Section (h2)**: `text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl`
+- **Card / Sub (h3)**: `text-2xl sm:text-3xl lg:text-4xl`
+
+## Colors
+
+| Token | Hex | Usage |
+|-------|-----|-------|
+| `text-primary` | `#1c1917` | Headings, primary text |
+| `text-secondary` | `#57534e` | Nav links, supporting text |
+| `text-muted` | `#78716c` | Footer labels, captions |
+| `text-subtle` | `#a8a29e` | Form labels, placeholders |
+| `text-inverse` | `#fbf2c4` | Text on dark backgrounds |
+| `bg-brand` | `#fbf2c4` | Page background |
+| `bg-dark` | `#1c1c1a` | Dark section backgrounds |
+
+## Components
+
+- **Inputs**: `font-heading` + underline-only border style
+- **Buttons (primary)**: `bg-dark text-inverse font-body uppercase tracking-[0.3em] text-[10px]`
+- **Buttons (outline)**: `border border-[#d6d3d1] text-secondary font-body uppercase`
+- **Labels**: `font-body uppercase tracking-[0.3em] text-[10px] text-subtle font-bold`
+
+## Scroll Animations
+
+Use the `<Reveal>` component to wrap sections for fade-up-on-scroll. Supports `delay` prop (ms).
+
+```tsx
+<Reveal delay={100}>
+  <section>...</section>
+</Reveal>
+```
+
+## Page Transitions
+
+Handled automatically by `<PageTransition>` in Root.tsx — smooth opacity + translateY fade between routes.
