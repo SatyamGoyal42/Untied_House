@@ -1,6 +1,6 @@
 import ServiceTemplate from "../components/ServiceTemplate";
 
-import heroImg from "@/assets/services/social-media/moodboard-1.png";
+import heroImg from "@/assets/services/social-media/hero.png";
 import moodboard2 from "@/assets/services/social-media/moodboard-2.png";
 import sharedImg1 from "@/assets/services/shared/project-1.png";
 import sharedImg2 from "@/assets/services/shared/project-2.png";

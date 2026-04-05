@@ -1,6 +1,6 @@
 import ServiceTemplate from "../components/ServiceTemplate";
 
-import heroImg from "@/assets/services/web-design/desk-composition.png";
+import heroImg from "@/assets/services/web-design/hero.png";
 import brandHeroImg from "@/assets/services/brand-identity/hero.png";
 import typographyImg from "@/assets/services/brand-identity/typography-detail.png";
 import sharedImg from "@/assets/services/shared/project-1.png";

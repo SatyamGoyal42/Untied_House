@@ -1,6 +1,6 @@
 import ServiceTemplate from "../components/ServiceTemplate";
 
-import heroImg from "@/assets/services/photography-content/film-aesthetic.png";
+import heroImg from "@/assets/services/photography-content/hero.png";
 import socialImg1 from "@/assets/services/social-media/moodboard-1.png";
 import socialImg2 from "@/assets/services/social-media/moodboard-2.png";
 import sharedImg from "@/assets/services/shared/project-1.png";
