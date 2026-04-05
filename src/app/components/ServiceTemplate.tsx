@@ -199,12 +199,12 @@ export default function ServiceTemplate({
               </div>
 
               {/* Desktop */}
-              <div className="hidden lg:grid lg:grid-cols-12 lg:gap-8 lg:h-[800px]">
-                <div className="col-span-8 relative bg-[#3a8899] overflow-hidden">
+              <div className="hidden lg:grid lg:grid-cols-12 lg:grid-rows-1 lg:gap-8 lg:h-[800px]">
+                <div className="col-span-8 relative bg-[#3a8899] overflow-hidden min-h-0">
                   <img
                     src={artifacts.primary.src}
                     alt={artifacts.primary.alt}
-                    className="w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-cover"
                   />
                   {artifacts.primary.label && (
                     <div className="absolute bottom-8 left-8">
@@ -216,19 +216,19 @@ export default function ServiceTemplate({
                     </div>
                   )}
                 </div>
-                <div className="col-span-4 flex flex-col gap-8">
-                  <div className="flex-1 bg-[#3a8899] overflow-hidden">
+                <div className="col-span-4 flex flex-col gap-8 min-h-0">
+                  <div className="relative flex-1 bg-[#3a8899] overflow-hidden min-h-0">
                     <img
                       src={artifacts.secondary.src}
                       alt={artifacts.secondary.alt}
-                      className="w-full h-full object-cover"
+                      className="absolute inset-0 w-full h-full object-cover"
                     />
                   </div>
-                  <div className="flex-1 bg-[#3a8899] overflow-hidden">
+                  <div className="relative flex-1 bg-[#3a8899] overflow-hidden min-h-0">
                     <img
                       src={artifacts.tertiary.src}
                       alt={artifacts.tertiary.alt}
-                      className="w-full h-full object-cover"
+                      className="absolute inset-0 w-full h-full object-cover"
                     />
                   </div>
                 </div>

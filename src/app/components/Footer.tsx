@@ -28,7 +28,7 @@ export default function Footer() {
       {/* Brand */}
       <div className="text-center space-y-3 sm:space-y-4">
         <Link to="/">
-          <h2 className="font-body font-medium text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-primary uppercase tracking-[-0.05em] hover:opacity-80 transition-opacity">
+          <h2 className="font-heading font-extralight not-italic tracking-[-0.04em] text-primary text-3xl sm:text-4xl md:text-5xl lg:text-6xl uppercase hover:opacity-70 transition-opacity">
             THE UNTIED HOUSE
           </h2>
         </Link>

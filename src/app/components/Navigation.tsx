@@ -60,7 +60,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between">
           <Link
             to="/"
-            className="font-['Manrope:Regular',sans-serif] font-normal text-[#1c1917] text-3xl sm:text-4xl lg:text-5xl hover:opacity-80 transition-opacity"
+            className="font-heading font-extralight not-italic tracking-[-0.04em] text-[#1c1917] text-2xl sm:text-3xl lg:text-4xl hover:opacity-70 transition-opacity"
           >
             THE UNTIED HOUSE
           </Link>
