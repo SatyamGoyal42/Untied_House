@@ -1,9 +1,9 @@
 import ServiceTemplate from "../components/ServiceTemplate";
 
 import heroImg from "@/assets/services/photography-content/hero.png";
-import socialImg1 from "@/assets/services/social-media/moodboard-1.png";
-import socialImg2 from "@/assets/services/social-media/moodboard-2.png";
-import sharedImg from "@/assets/services/shared/project-1.png";
+import a1 from "@/assets/services/photography-content/pexels-alperen-sevgen-2157086354-36304686.jpg";
+import a2 from "@/assets/services/photography-content/pexels-eva-bronzini-6956225.jpg";
+import a3 from "@/assets/services/photography-content/pexels-thisispav-27542459.jpg";
 
 export default function PhotographyContentPage() {
   return (
@@ -44,16 +44,16 @@ export default function PhotographyContentPage() {
       artifactsHeading="Artifacts of Vision"
       artifacts={{
         primary: {
-          src: socialImg1,
+          src: a1,
           alt: "Atmospheric editorial photography",
           label: "Editorial Series",
         },
         secondary: {
-          src: socialImg2,
+          src: a2,
           alt: "Product photography detail",
         },
         tertiary: {
-          src: sharedImg,
+          src: a3,
           alt: "Content campaign overview",
         },
       }}

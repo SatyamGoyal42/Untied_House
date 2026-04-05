@@ -1,9 +1,9 @@
 import ServiceTemplate from "../components/ServiceTemplate";
 
 import heroImg from "@/assets/services/web-design/hero.png";
-import brandHeroImg from "@/assets/services/brand-identity/hero.png";
-import typographyImg from "@/assets/services/brand-identity/typography-detail.png";
-import sharedImg from "@/assets/services/shared/project-1.png";
+import a1 from "@/assets/services/web-design/a1.png";
+import a2 from "@/assets/services/web-design/a2.png";
+import a3 from "@/assets/services/web-design/a3.png";
 
 export default function WebDesignPage() {
   return (
@@ -44,16 +44,16 @@ export default function WebDesignPage() {
       artifactsHeading="Artifacts of Experience"
       artifacts={{
         primary: {
-          src: brandHeroImg,
+          src: a1,
           alt: "Web design interface showcase",
           label: "Interface Design",
         },
         secondary: {
-          src: typographyImg,
+          src: a2,
           alt: "Typography system for web",
         },
         tertiary: {
-          src: sharedImg,
+          src: a3,
           alt: "Responsive design across devices",
         },
       }}

@@ -1,9 +1,9 @@
 import ServiceTemplate from "../components/ServiceTemplate";
 
 import heroImg from "@/assets/services/social-media/hero.png";
-import moodboard2 from "@/assets/services/social-media/moodboard-2.png";
-import sharedImg1 from "@/assets/services/shared/project-1.png";
-import sharedImg2 from "@/assets/services/shared/project-2.png";
+import a1 from "@/assets/services/social-media/pexels-ds-stories-9227672.jpg";
+import a2 from "@/assets/services/social-media/pexels-markus-winkler-1430818-30383665.jpg";
+import a3 from "@/assets/services/social-media/pexels-onbab-14678486.jpg";
 
 export default function SocialMediaPage() {
   return (
@@ -44,16 +44,16 @@ export default function SocialMediaPage() {
       artifactsHeading="Artifacts of Presence"
       artifacts={{
         primary: {
-          src: moodboard2,
+          src: a1,
           alt: "Social media grid layout",
           label: "Grid Systems",
         },
         secondary: {
-          src: sharedImg1,
+          src: a2,
           alt: "Content campaign visual",
         },
         tertiary: {
-          src: sharedImg2,
+          src: a3,
           alt: "Brand storytelling on social platforms",
         },
       }}

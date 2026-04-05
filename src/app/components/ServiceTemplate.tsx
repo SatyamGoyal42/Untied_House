@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { Link } from "react-router";
 import Reveal from "./Reveal";
 
@@ -54,16 +55,42 @@ export default function ServiceTemplate({
   artifacts,
   ctaLines,
 }: ServiceTemplateProps) {
+  const heroImgRef = useRef<HTMLImageElement>(null);
+  const heroSectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const img = heroImgRef.current;
+      const section = heroSectionRef.current;
+      if (!img || !section) return;
+
+      const rect = section.getBoundingClientRect();
+      const scrolled = -rect.top;
+      if (scrolled < 0) return;
+
+      const progress = scrolled / section.offsetHeight;
+      const translateY = scrolled * 0.35;
+      const scale = 1 + progress * 0.08;
+
+      img.style.transform = `translateY(${translateY}px) scale(${scale})`;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <main className="bg-[#fbf2c4] w-full">
-      <div className="flex flex-col gap-12 sm:gap-16 lg:gap-[100px]">
+      <div className="flex flex-col gap-0">
         {/* Hero */}
         <Reveal>
-          <section className="bg-[#fbf2c4] w-full py-8 sm:py-12 lg:py-[50px]">
-            <div className="relative w-full h-[600px] sm:h-[800px] lg:h-[1207px]">
+          <section className="bg-[#fbf2c4] w-full">
+            <div ref={heroSectionRef} className="relative w-full h-[600px] sm:h-[800px] lg:h-[1207px] overflow-hidden">
               <img
+                ref={heroImgRef}
                 alt={heroImageAlt}
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover will-change-transform"
+                style={{ transformOrigin: "center top" }}
                 src={heroImage}
               />
               <div className="relative h-full px-4 sm:px-8 lg:px-[100px] py-8 sm:py-12 lg:py-[50px] flex flex-col items-start justify-end">
